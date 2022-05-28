@@ -3,21 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CheckboxModule } from 'primeng/checkbox';
-import {InputTextModule} from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { ImageModule } from 'primeng/image';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CheckboxModule,
-    InputTextModule,
-    ButtonModule,
-    ImageModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

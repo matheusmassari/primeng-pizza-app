@@ -1,0 +1,63 @@
+<div
+  class="page-wrapper"
+  [style.background-image]="
+    'url(https://images.unsplash.com/photo-1564936281659-ba4f75a41956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)'
+  "
+>
+  <div class="middle">
+    <div class="inner">
+      <div
+        class="surface-card p-4 shadow-2 border-round m-auto xl:w-3 lg:w-4"
+        id="card"
+        
+      >
+        <div class="text-center mb-5">
+          <img src="assets/pizza.svg" alt="Image" height="90" />
+          <p class="titulo">Pizza Admin App</p>
+        </div>
+
+        <div>
+          <span class="p-float-label mb-5">
+            <input id="float-input" type="text" class="w-full" pInputText />
+            <label for="float-input">Usuário</label>
+          </span>
+
+          <span class="p-float-label mb-3">
+            <input
+              
+              id="float-input"
+              type="password"
+              class="w-full"
+              pInputText
+            />
+            <label for="float-input">Senha</label>
+          </span>
+          <div class="flex align-items-center justify-content-between mb-6">
+            <div class="flex align-items-center">
+                <input type="checkbox" class="checkbox">
+                <label for="rememberme1" class="text-900">Lembrar</label>
+            </div>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              pButton
+              pRipple
+              label="Entrar"
+              icon="pi pi-user"
+              class="w-5 p-button-danger"
+              (click)="goToPage('pizza-list')"
+              (keyup)="goToPage('pizza-list')"
+            ></button>
+            <p-progressSpinner
+              *ngIf="isLoading"
+              [style]="{ width: '3rem', height: '3rem' }"
+            ></p-progressSpinner>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
