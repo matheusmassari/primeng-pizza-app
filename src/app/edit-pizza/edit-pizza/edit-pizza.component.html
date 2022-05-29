@@ -1,0 +1,120 @@
+<div
+  class="page-wrapper"
+  [style.background-image]="'url(assets/images/criar-pizza-bg.jpg)'"
+>
+  <div class="middle">
+    <div class="inner">
+      <div
+        class="surface-card p-4 shadow-2 border-round m-auto xl:w-3 lg:w-4"
+        id="card"
+      >
+        <div class="text-center mb-5">
+          <p class="titulo">Nova Pizza!</p>
+        </div>
+        <form [formGroup]="pizzaForm" *ngIf="!success">
+          <div>
+            <span class="p-float-label mb-5">
+              <input
+                id="float-input"
+                type="text"
+                class="w-full"
+                formControlName="name"
+                pInputText
+              />
+              <label for="float-input">Nome</label>
+            </span>
+
+            <span class="p-float-label mb-5">
+              <input
+                id="float-input"
+                type="text"
+                class="w-full"
+                formControlName="price"
+                pInputText
+              />
+              <label for="float-input">Preço</label>
+            </span>
+
+            <span class="p-float-label mb-5">
+              <input
+                id="float-input"
+                type="text"
+                class="w-full"
+                formControlName="imageUrl"
+                pInputText
+              />
+              <label for="float-input">Url da Imagem</label>
+            </span>
+            <span class="p-float-label mb-5">
+              <textarea
+                id="float-input"
+                class="w-full"
+                style="height: 7rem"
+                pInputTextarea
+                formControlName="ingredients"
+              ></textarea>
+              <label for="float-input">Ingredientes</label>
+            </span>
+
+            <div class="btn-wrapper">
+              <button
+                pButton
+                pRipple
+                label="Voltar"
+                class="w-4 p-button-secondary"
+                (click)="goToPage('pizza-list')"
+              ></button>
+              <button
+                pButton
+                pRipple
+                [label]="btnLabel"
+                icon="pi pi-plus"
+                class="w-6 p-button-help"
+                (click)="addPizza()"
+                *ngIf="btnLabel === 'Cadastrar'"
+              ></button>
+              <button
+                pButton
+                pRipple
+                [label]="btnLabel"
+                icon="pi pi-plus"
+                class="w-6 p-button-help"
+                (click)="updatePizza()"
+                *ngIf="btnLabel === 'Atualizar'"
+              ></button>
+            </div>
+          </div>
+        </form>
+        <div *ngIf="success">
+          <p-messages severity="success" >
+            <ng-template pTemplate>
+              <img src="assets/images/success.svg" width="32" />
+              <div class="ml-2">Pizza cadastrada com successo!</div>
+            </ng-template>
+          </p-messages>
+          <div class="btn-wrapper">
+              <button
+                pButton
+                pRipple
+                label="Dashboard"
+                class="w-5 p-button-secondary"
+                (click)="goToPage('pizza-list')"
+              ></button>
+              <button
+                pButton
+                pRipple
+                label="Nova Pizza"
+                icon="pi pi-plus"
+                class="w-6 p-button-help"
+                (click)="newForm()"
+              ></button>
+            </div>
+        </div>
+
+        <!-- <p>{{ pizzaForm.value | json }}</p> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

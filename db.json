@@ -7,38 +7,38 @@
   ],
   "pizza": [
     {
-      "id": 1,
       "name": "Baiana",
       "imageUrl": "https://images.unsplash.com/photo-1593246049226-ded77bf90326?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870",
-      "price": "39.90",
-      "ingredients": "Queijo, calabresa, pimenta, ovo"
+      "price": 39.9,
+      "ingredients": "Queijo, calabresa, pimenta, ovo",
+      "id": 1
     },
     {
       "id": 2,
       "name": "Portuguesa",
       "imageUrl": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770",
-      "price": "39.90",
+      "price": 39.9,
       "ingredients": "Queijo, presunto, palmito, ovo e ervilha"
     },
     {
       "id": 3,
       "name": "4 Queijos",
       "imageUrl": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770",
-      "price": "49.90",
+      "price": 49.9,
       "ingredients": "Mussarela, gorgonzola, parmesão e provolone"
     },
     {
       "id": 4,
       "name": "Abobrinha",
       "imageUrl": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770",
-      "price": "29.90",
+      "price": 29.9,
       "ingredients": "Mussarela de búfala, abobrinha e rúcula"
     },
     {
       "id": 5,
       "name": "Rúcula",
       "imageUrl": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870",
-      "price": "29.90",
+      "price": 29.9,
       "ingredients": "Mussarela, rúcula e parmesão"
     },
     {
@@ -47,6 +47,13 @@
       "price": 35.9,
       "ingredients": "Mussarela, calabresa, cebola, óregano.",
       "id": 7
+    },
+    {
+      "name": "Exemplo",
+      "imageUrl": "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "price": "60.90",
+      "ingredients": "Mussarela, parmesão, orégano, tomate.",
+      "id": 8
     }
   ]
 }

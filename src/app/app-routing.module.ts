@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PizzaListComponent } from './pizza-list/pizza-list/pizza-list.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -13,6 +12,11 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () =>
       import('./login-page/login-page.module').then((m) => m.LoginPageModule),
+  },
+  {
+    path: 'edit-pizza',
+    loadChildren: () =>
+      import('./edit-pizza/edit-pizza.module').then((m) => m.EditPizzaModule),
   },
 ];
 

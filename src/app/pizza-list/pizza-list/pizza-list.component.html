@@ -1,4 +1,69 @@
-<div class="page-wrapper" [style.background-image]="'url(../../assets/images/pizza-bg.jpeg)'">
+<!-- <div class="page-wrapper" [style.background-image]="'url(../../assets/images/pizza-bg.jpeg)'">
+</div> -->
 
+<!-- <input type="text" style="margin-bottom: 5rem;"> -->
 
+<div class="page-wrapper">
+  <p-menubar [model]="items" [style]="cardStyle">
+    <ng-template pTemplate="start">
+      <img src="assets/pizza.svg" class="mr-2 ml-4 pizzaIcon" />
+    </ng-template>
+    <ng-template pTemplate="end">
+      <input
+        type="text"
+        pInputText
+        placeholder="Buscar"
+        [(ngModel)]="searchPizza"
+        style="margin-right: 1rem"
+      />
+    </ng-template>
+  </p-menubar>
+
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="1rem grid">
+      <div
+        fxFlex="25%"
+        fxFlex.md="50%"
+        fxFlex.sm="50%"
+        fxFlex.xs="100%"
+        *ngFor="let pizza of pizzaArray | filter: searchPizza"
+      >
+        <p-card
+          header="{{ pizza.name }}"
+          styleClass="p-card-shadow"
+          [style]="cardStyle"
+        >
+          <ng-template pTemplate="header">
+            <img alt="Card" src="{{ pizza.imageUrl }}" />
+          </ng-template>
+          <div class="conteudo" >
+            <h3>Ingredientes:</h3>
+            <p>
+              {{ pizza.ingredients }}
+            </p>
+          </div>
+          <ng-template pTemplate="footer">
+            <div class="btn-wrapper">
+              <button
+                (click)="editPizza(pizza.id)"
+                pButton
+                pRipple
+                type="button"
+                label="Editar"
+                class="p-button-outlined p-button-rounded p-button-help"
+              ></button>
+              <button
+                (click)="deletePizza(pizza.id)"
+                pButton
+                pRipple
+                type="button"
+                label="Remover"
+                class="p-button-outlined p-button-rounded p-button-danger"
+              ></button>
+            </div>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
 </div>

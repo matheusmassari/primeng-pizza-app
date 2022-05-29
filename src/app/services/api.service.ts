@@ -15,15 +15,19 @@ export class ApiService {
     return this.http.get<any>("http://localhost:3000/pizza/")
   }
 
-  // create(data: any) {
-  //   return this.http.post<any>('http://localhost:3000/productList/', data);
-  // }
+  getSinglePizza(id: number) {
+    return this.http.get<any>('http://localhost:3000/pizza/' + id);
+  }
 
-  // update(data: any, id: number) {
-  //   return this.http.put<any>('http://localhost:3000/productList/' + id, data);
-  // }
+  create(data: any) {
+    return this.http.post<any>('http://localhost:3000/pizza/', data);
+  }
 
-  // delete(id: number) {
-  //   return this.http.delete<any>('http://localhost:3000/productList/' + id);
-  // }
+  update(data: any, id: number) {
+    return this.http.put<any>('http://localhost:3000/pizza/' + id, data);
+  }
+
+  delete(id: number) {
+    return this.http.delete<any>('http://localhost:3000/pizza/' + id);
+  }
 }
