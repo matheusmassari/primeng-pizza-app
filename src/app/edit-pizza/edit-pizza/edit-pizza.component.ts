@@ -57,7 +57,7 @@ export class EditPizzaComponent implements OnInit {
     console.log(this.pizzaForm.value)
     this.api.update(this.pizzaForm.value, this.id).subscribe({
       next: (res) => {
-        alert('Pizza atualizada!');
+        this.success = true
         this.pizzaForm.reset();        
       },
       error: () => alert('Erro ao atualizar pizza :('),

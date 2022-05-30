@@ -1,7 +1,7 @@
 <div
   class="page-wrapper"
   [style.background-image]="
-    'url(https://images.unsplash.com/photo-1564936281659-ba4f75a41956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)'
+    'url(assets/images/login-page.jpg)'
   "
 >
   <div class="middle">
@@ -46,8 +46,7 @@
               label="Entrar"
               icon="pi pi-user"
               class="w-5 p-button-danger"
-              (click)="goToPage('pizza-list')"
-              (keyup)="goToPage('pizza-list')"
+              (click)="goToPage('pizza-list')"                   
             ></button>
             <p-progressSpinner
               *ngIf="isLoading"

@@ -19,6 +19,7 @@
     </ng-template>
   </p-menubar>
 
+  
   <div class="content">
     <div fxLayout="row wrap" fxLayoutGap="1rem grid">
       <div
@@ -31,7 +32,7 @@
         <p-card
           header="{{ pizza.name }}"
           styleClass="p-card-shadow"
-          [style]="cardStyle"
+          [style]="cardStyle"          
         >
           <ng-template pTemplate="header">
             <img alt="Card" src="{{ pizza.imageUrl }}" />
@@ -63,6 +64,7 @@
             </div>
           </ng-template>
         </p-card>
+        
       </div>
     </div>
   </div>

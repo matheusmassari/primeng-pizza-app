@@ -19,7 +19,7 @@ export class PizzaListComponent implements OnInit {
   searchPizza: any;  
 
   cardStyle = {
-    background: '#f5f5f5',
+    background: '#f5f5f5',      
   };
 
   ngOnInit(): void {
@@ -70,6 +70,5 @@ export class PizzaListComponent implements OnInit {
 
   editPizza(pizzaId: number) {
     this.router.navigate(['edit-pizza', pizzaId])
-  }
-
+  }  
 }
