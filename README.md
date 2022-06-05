@@ -15,7 +15,7 @@ No arquivo angular.json, editar styles:
 "styles": [
               "src/styles.scss",
               "node_modules/primeicons/primeicons.css",
-              "/node_modules/primeflex/primeflex.css",
+              "node_modules/primeflex/primeflex.css",
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css"
             ],
